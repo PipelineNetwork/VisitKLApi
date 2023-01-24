@@ -3,18 +3,52 @@
 @section('title', 'Page Title')
  
 @section('content')
-    <p>This is my body content.</p>
+<div class="row my-3">
+    <div class="col">
 
-    <form action="/admin/events" method="POST">
-        @csrf
+        <form action="/admin/events" method="POST" enctype="multipart/form-data">
+            @csrf
 
-        <div class="row">
-        
-
-            <div class="mb-3 col-md-4">
-                <label>Bilangan Kes</label><br>
-                <input type="number" min="0" class="form-control" name="bil_kes_general" >
+            <div class="mb-3 col-4">
+                <label class="form-label">Title</label>
+                <input type="text" name="title" class="form-control">
             </div>
 
-    </form>
+            <div class="mb-3 col-4">
+                <label class="form-label">Category</label>
+                <select class="form-select" name="category">
+                    <option value="Organiser" selected>Organiser</option>
+                    <option value="KLCH">KLCH</option>
+    
+                </select>  
+            </div>
+              
+
+            <button class="btn btn-primary" type="submit">Create Event</button>
+
+        </form>
+
+    </div>
+</div>
+
+<div class="row my-3">
+    <h3>Event</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Category</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($events as $event)
+            <tr>
+                <td>{{$event->title}}</td>
+                <td>{{$event->category}}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
 @endsection

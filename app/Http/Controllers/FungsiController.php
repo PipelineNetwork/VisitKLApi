@@ -164,6 +164,9 @@ class FungsiController extends Controller
 
     public function admin_create_product(Request $request) {
         $product = new VisitklProduct;
+        $product->title = $request->title;
+        $product->description = $request->description;
+        $product->link = $request->link;
         $product->save(); 
         return back();            
     }     
@@ -201,6 +204,9 @@ class FungsiController extends Controller
 
     public function admin_create_offer(Request $request) {
         $offer = new VisitklOffer;
+        $offer->title = $request->title;
+        $offer->description = $request->description;
+        $offer->link = $request->link;        
         $offer->save(); 
         return back();   
     }     
@@ -237,7 +243,13 @@ class FungsiController extends Controller
         return view('admin.item', compact('item'));          
     }  
     
-    public function admin_create_gallery_item(Request $request) {}  
+    public function admin_create_gallery_item(Request $request) {
+        $item = new VisitklGalleryItem;
+        $item->title = $request->title;
+        $item->category = $request->category;
+        $item->save();
+        return back();      
+    }  
 
     public function admin_update_gallery_item(Request $request) {}  
 

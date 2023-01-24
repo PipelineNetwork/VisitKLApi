@@ -3,5 +3,6 @@
 @section('title', 'Page Title')
  
 @section('content')
-    <p>This is my body content.</p>
+    <h1>Dashboard</h1>
+    <p>Get as many infos as possible</p>
 @endsection

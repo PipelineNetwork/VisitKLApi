@@ -46,14 +46,9 @@
     </div>
 
     <div class="container">
-        <h3>Quick Links</h3>
-        <div class="row">
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>       
-        </div>       
+        <a href="https://www.dbkl.gov.my">
+            <img src="/footer.png" class="img-fluid" alt="...">     
+        </a>
     </div>
 
 
