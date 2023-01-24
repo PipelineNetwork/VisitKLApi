@@ -18,7 +18,14 @@
                 <div class="mb-3 col-4">
                     <label class="form-label">Category</label>
                     <select class="form-select" name="category">
-                        <option value="accomodations" selected>Accomodations</option>
+                        <option value="Accomodations" selected>Accomodations</option>
+                        <option value="Food & Entertainment">Food & Entertainment</option>
+                        <option value="Arts & Culture">Arts & Culture</option>
+                        <option value="Places To Go">Places To Go</option>
+                        <option value="Health & Wellness">Health & Wellness</option>
+                        <option value="MICE">MICE</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Sports">Sports</option>
                     </select>                    
                 </div>                
 
@@ -26,6 +33,16 @@
                     <label class="form-label">Location</label>
                     <select class="form-select" name="location">
                         <option value="Bukit Bintang" selected>Bukit Bintang</option>
+                        <option value="Kepong" selected>Kepong</option>
+                        <option value="Batu" selected>Batu</option>
+                        <option value="Wangsa Maju" selected>Wangsa Maju</option>
+                        <option value="Segambut" selected>Segambut</option>
+                        <option value="Setiawangsa" selected>Setiawangsa</option>
+                        <option value="Titiwangsa" selected>Titiwangsa</option>
+                        <option value="Lembah Pantai" selected>Lembah Pantai</option>
+                        <option value="Seputeh" selected>Seputeh</option>
+                        <option value="Cheras" selected>Cheras</option>
+                        <option value="Bandar Tun Razak" selected>Bandar Tun Razak</option>
                     </select>    
                 </div>
 
@@ -52,16 +69,18 @@
             <thead>
                 <tr>
                     <th scope="col">Title</th>
+                    <th scope="col">Category</th>
                     <th scope="col">Location</th>
-                    <th scope="col">Image</th>
+                    <th scope="col">Description</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($experiences as $experience)
                 <tr>
                     <td>{{$experience->title}}</td>
+                    <td>{{$experience->category}}</td>
                     <td>{{$experience->location}}</td>
-                    <td>{{$experience->image}}</td>
+                    <td>{{$experience->description}}</td>
                 </tr>
                 @endforeach
             </tbody>

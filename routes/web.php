@@ -5,6 +5,7 @@ use App\Http\Controllers\FungsiController;
 
 
 Route::get('/', [FungsiController::class, 'user_view_homepage']);
+Route::post('/', [FungsiController::class, 'user_search']);
 Route::get('/admin', [FungsiController::class, 'admin_view_dashboard']);
 
 Route::get('/about', [FungsiController::class, 'user_view_about']);

@@ -18,6 +18,10 @@ class FungsiController extends Controller
         return view('homepage');
     }
 
+    public function user_search() {
+        return view('results');
+    }    
+
     public function user_view_about() {
         return view('about');
     }    

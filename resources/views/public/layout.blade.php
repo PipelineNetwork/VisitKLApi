@@ -28,7 +28,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="/about">About</a>
+                    {{-- <a class="nav-link" href="/about">About</a> --}}
                     <a class="nav-link" href="/experiences">Things To Do</a>
                     <a class="nav-link" href="/products">Products & Services</a>
                     <a class="nav-link" href="/offers">Deals & Packages</a>
@@ -60,10 +60,16 @@
 
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
-            <span class="text-muted">Copy Right @ Tourism Unit DBKL <br/>
-                Total Visitor: XXX <br/>
-                Best Viewed In Internet Explorer<br/>
-                <a href="/admin">Administrator</a><br/>
+            <div class="row">
+                <div class="col">
+                    <span class="text-muted">Copy Right @ Tourism Unit DBKL <br/>
+                        <a href="/admin">Administrator</a><br/>
+                </div>
+                <div class="col">
+                    <span class="text-muted">Best Viewed In Internet Explorer<br/>
+                        Total Visitor: XXX <br/>                      
+                </div>
+            </div>
 
             </span>
         </div>
