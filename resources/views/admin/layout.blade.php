@@ -35,6 +35,7 @@
                     <a class="nav-link" href="/admin/gallery">Gallery</a>
                     <a class="nav-link" href="/admin/events">What's On</a>
                     <a class="nav-link" href="/admin/eform">E-Form</a>
+                    <a class="nav-link" href="/admin/faqs">F.A.Q</a>
                 </div>
             </div>
         </div>

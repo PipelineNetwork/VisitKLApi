@@ -16,6 +16,8 @@ Route::get('/admin/events/{event_id}', [FungsiController::class, 'admin_view_eve
 Route::post('/admin/events', [FungsiController::class, 'admin_create_event']);
 Route::put('/admin/events/{event_id}', [FungsiController::class, 'admin_update_event']);
 
+Route::get('/eform', [FungsiController::class, 'user_view_eform']);
+Route::post('/eform', [FungsiController::class, 'user_submit_eform']);
 Route::get('/admin/eform', [FungsiController::class, 'admin_view_eform']);
 Route::post('/admin/eform', [FungsiController::class, 'admin_submit_eform']);
 
@@ -40,3 +42,15 @@ Route::get('/admin/products', [FungsiController::class, 'admin_view_products']);
 Route::get('/admin/products/{product_id}', [FungsiController::class, 'admin_view_product']);
 Route::post('/admin/products', [FungsiController::class, 'admin_create_product']);
 Route::put('/admin/products/{product_id}', [FungsiController::class, 'admin_update_product']);
+
+
+Route::get('/gallery', [FungsiController::class, 'user_view_gallery']);
+Route::get('/gallery/{item_id}', [FungsiController::class, 'user_view_gallery_item']);
+Route::get('/admin/gallery', [FungsiController::class, 'admin_view_gallery']);
+Route::get('/admin/gallery/{item_id}', [FungsiController::class, 'admin_view_gallery_item']);
+Route::post('/admin/gallery', [FungsiController::class, 'admin_create_gallery_item']);
+Route::put('/admin/gallery/{item_id}', [FungsiController::class, 'admin_update_gallery_item']);
+
+Route::get('/faqs', [FungsiController::class, 'user_view_faq']);
+Route::get('/admin/faqs', [FungsiController::class, 'admin_view_faq']);
+Route::post('/admin/faqs', [FungsiController::class, 'admin_create_faq']);

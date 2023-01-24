@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\VisitklEform;
 use App\Models\VisitklEvent;
 use App\Models\VisitklExperience;
+use App\Models\VisitklProduct;
+use App\Models\VisitklOffer;
+use App\Models\VisitklGalleryItem;
+use App\Models\VisitklFaq;
 
 class FungsiController extends Controller
 {
@@ -115,7 +119,13 @@ class FungsiController extends Controller
     }     
 
     public function admin_create_experience(Request $request) {
+        
         $experience = new VisitklExperience;
+        $experience->title = $request->title;
+        $experience->category = $request->category;
+        $experience->location = $request->location;
+        $experience->description = $request->description;
+        $experience->image_url = $request->file('image')->store('visitkl/uploads');
         $experience->save();
         return back();
     }     
@@ -130,69 +140,101 @@ class FungsiController extends Controller
     ## Ecommerce
 
     public function user_view_products() {
-        $products = '';
+        $products = VisitklProduct::all();
         return view('public.products', compact('products'));        
     }
 
     public function user_view_product(Request $request) {
-        $products = '';
+        $id = (int) $request->route('product_id');
+        $product = VisitklProduct::find($id); 
         return view('public.product', compact('product'));         
     }  
 
     public function admin_view_products() {
-        $products = '';
+        $products = VisitklProduct::all();
         return view('admin.products', compact('products'));           
     }
 
     public function admin_view_product(Request $request) {
-        $product = '';
+        $id = (int) $request->route('product_id');
+        $product = VisitklProduct::find($id); 
         return view('admin.product', compact('product'));         
     }     
 
-    public function admin_create_product(Request $request) {}     
+    public function admin_create_product(Request $request) {
+        $product = new VisitklProduct;
+        $product->save(); 
+        return back();            
+    }     
 
-    public function admin_update_product(Request $request) {}      
+    public function admin_update_product(Request $request) {
+        $id = (int) $request->route('product_id');
+        $product = VisitklProduct::find($id); 
+        $product->save(); 
+        return back();     
+    }      
 
     ## offer
 
     public function user_view_offers() {
-        $offers = '';
+        $offers = VisitklOffer::all();
         return view('public.offers', compact('offers'));          
     }
 
     public function user_view_offer(Request $request) {
-        $offer = '';
+        $id = (int) $request->route('offer_id');
+        $offer = VisitklOffer::find($id); 
         return view('public.offer', compact('offer'));        
     }    
 
     public function admin_view_offers() {
-        $offers = '';
+        $offers = VisitklOffer::all();
         return view('admin.offers', compact('offers'));        
     }
 
     public function admin_view_offer(Request $request) {
-        $offer = '';
+        $id = (int) $request->route('offer_id');
+        $offer = VisitklOffer::find($id); 
         return view('admin.offer', compact('offer'));         
     }     
 
     public function admin_create_offer(Request $request) {
-
+        $offer = new VisitklOffer;
+        $offer->save(); 
+        return back();   
     }     
 
     public function admin_update_offer(Request $request) {
-
+        $id = (int) $request->route('offer_id');
+        $offer = VisitklOffer::find($id); 
+        $offer->save(); 
+        return back();           
     }   
     
     ## gallery
 
 
-    public function user_view_gallery() {}   
+    public function user_view_gallery() {
+        $items = VisitklGalleryItem::all();
+        return view('public.items', compact('items'));            
+    }   
 
-    public function user_view_gallery_item(Request $request) {}   
+    public function user_view_gallery_item(Request $request) {
+        $id = (int) $request->route('item_id');
+        $items = VisitklGalleryItem::find($id);
+        return view('public.item', compact('item'));          
+    }   
     
-    public function admin_view_gallery() {}  
+    public function admin_view_gallery() {
+        $items = VisitklGalleryItem::all();
+        return view('admin.items', compact('items'));          
+    }  
 
-    public function admin_view_gallery_item(Request $request) {}  
+    public function admin_view_gallery_item(Request $request) {
+        $id = (int) $request->route('item_id');
+        $item = VisitklGalleryItem::find($id);
+        return view('admin.item', compact('item'));          
+    }  
     
     public function admin_create_gallery_item(Request $request) {}  
 
@@ -200,12 +242,28 @@ class FungsiController extends Controller
 
     ## faq
 
-    public function user_view_faq() {}    
+    public function user_view_faq() {
+        $faqs = VisitklFaq::all();
+        return view('public.faqs', compact('faqs'));  
+    }    
 
-    public function admin_view_faq() {}    
+    public function admin_view_faq(Request $request) {
+        $id = (int) $request->route('faq_id');
+        $faq = VisitklFaq::find($id);
+        return view('admin.faq', compact('faq'));  
+    }    
 
-    public function admin_create_faq(Request $request) {}    
+    public function admin_create_faq(Request $request) {
+        $faq = new VisitklFaq;
+        $faq->save(); 
+        return back();   
+    }    
 
-    public function admin_update_faq(Request $request) {}    
+    public function admin_update_faq(Request $request) {
+        $id = (int) $request->route('faq_id');
+        $faq = VisitklFaq::find($id);
+        $faq->save(); 
+        return back(); 
+    }    
  
 }

@@ -35,6 +35,7 @@
                     <a class="nav-link" href="/gallery">Gallery</a>
                     <a class="nav-link" href="/events">What's On</a>
                     <a class="nav-link" href="/eform">E-Form</a>
+                    <a class="nav-link" href="/faqs">F.A.Q</a>
                 </div>
             </div>
         </div>
@@ -52,14 +53,7 @@
             <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
             <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
             <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>       
-        </div>
-        <div class="row">
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
-            <div class="col mx-5 my-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/JATA_NEGARA_MALAYSIA.png/640px-JATA_NEGARA_MALAYSIA.png" class="img-fluid" alt="..."></div>
-        </div>        
+        </div>       
     </div>
 
 
