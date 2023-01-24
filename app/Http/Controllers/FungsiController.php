@@ -73,6 +73,10 @@ class FungsiController extends Controller
 
     public function user_submit_eform(Request $request) {
         $eform = new VisitklEform;
+        $eform->name = $request->name;
+        $eform->venue = $request->venue;
+        $eform->event_type = $request->event_type;
+        $eform->description = $request->description;
         $eform->save();
         return back();      
     }
@@ -82,13 +86,6 @@ class FungsiController extends Controller
         return view('admin.eforms', compact('eforms'));        
     }
 
-    public function admin_submit_eform(Request $request) {
-        $id = 1;
-        $eform = VisitklEform::find($id);  
-        $event = new VisitklEvent;   
-        $event->save();
-        return back();      
-    }    
     
     
 
@@ -252,13 +249,14 @@ class FungsiController extends Controller
     }    
 
     public function admin_view_faq(Request $request) {
-        $id = (int) $request->route('faq_id');
-        $faq = VisitklFaq::find($id);
-        return view('admin.faq', compact('faq'));  
+        $faqs = VisitklFaq::all();
+        return view('admin.faq', compact('faqs'));  
     }    
 
     public function admin_create_faq(Request $request) {
         $faq = new VisitklFaq;
+        $faq->question = $request->question;
+        $faq->answer = $request->answer;
         $faq->save(); 
         return back();   
     }    

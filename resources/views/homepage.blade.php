@@ -253,4 +253,29 @@
         </div>
     </div>
 
+
+    <script>
+        lol();
+
+        function lol() {
+            fetch('https://www.instagram.com/explore/tags/visitkl/?__a=1')
+                .then((response) => response.json())
+                .then((data) => {
+                    for (var i = 0; i < 6; i++) {
+                        var $this = data.graphql.hashtag.edge_hashtag_to_media.edges[i].node;
+                        $('#container').append('<img src="' + $this.thumbnail_resources[2].src + '">');
+                        console.log($this.thumbnail_resources[2].src)
+                    }
+                });
+
+
+            // function(data, status) {
+            //     for (var i = 0; i < 6; i++) {
+            //         var $this = data.graphql.hashtag.edge_hashtag_to_media.edges[i].node;
+            //         $('#container').append('<img src="' + $this.thumbnail_resources[2].src + '">');
+            //         console.log($this.thumbnail_resources[2].src)
+            //     }
+            // });
+        }
+    </script>
 @endsection
