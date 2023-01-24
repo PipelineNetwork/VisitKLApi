@@ -5,13 +5,38 @@ use App\Http\Controllers\FungsiController;
 
 
 Route::get('/', [FungsiController::class, 'user_view_homepage']);
+Route::get('/admin', [FungsiController::class, 'admin_view_dashboard']);
+
+Route::get('/about', [FungsiController::class, 'user_view_about']);
 
 Route::get('/events', [FungsiController::class, 'user_view_events']);
 Route::get('/events/{event_id}', [FungsiController::class, 'user_view_event']);
-Route::get('/eform', [FungsiController::class, 'user_view_eform']);
-Route::post('/eform', [FungsiController::class, 'user_submit_eform']);
-
 Route::get('/admin/events', [FungsiController::class, 'admin_view_events']);
 Route::get('/admin/events/{event_id}', [FungsiController::class, 'admin_view_event']);
 Route::post('/admin/events', [FungsiController::class, 'admin_create_event']);
 Route::put('/admin/events/{event_id}', [FungsiController::class, 'admin_update_event']);
+
+Route::get('/admin/eform', [FungsiController::class, 'admin_view_eform']);
+Route::post('/admin/eform', [FungsiController::class, 'admin_submit_eform']);
+
+
+Route::get('/experiences', [FungsiController::class, 'user_view_experiences']);
+Route::get('/experiences/{experience_id}', [FungsiController::class, 'user_view_experience']);
+Route::get('/admin/experiences', [FungsiController::class, 'admin_view_experiences']);
+Route::get('/admin/experiences/{experience_id}', [FungsiController::class, 'admin_view_experience']);
+Route::post('/admin/experiences', [FungsiController::class, 'admin_create_experience']);
+Route::put('/admin/experiences/{experience_id}', [FungsiController::class, 'admin_update_experience']);
+
+Route::get('/offers', [FungsiController::class, 'user_view_offers']);
+Route::get('/offers/{offer_id}', [FungsiController::class, 'user_view_offer']);
+Route::get('/admin/offers', [FungsiController::class, 'admin_view_offers']);
+Route::get('/admin/offers/{offer_id}', [FungsiController::class, 'admin_view_offer']);
+Route::post('/admin/offers', [FungsiController::class, 'admin_create_offer']);
+Route::put('/admin/offers/{offer_id}', [FungsiController::class, 'admin_update_offer']);
+
+Route::get('/products', [FungsiController::class, 'user_view_products']);
+Route::get('/products/{product_id}', [FungsiController::class, 'user_view_product']);
+Route::get('/admin/products', [FungsiController::class, 'admin_view_products']);
+Route::get('/admin/products/{product_id}', [FungsiController::class, 'admin_view_product']);
+Route::post('/admin/products', [FungsiController::class, 'admin_create_product']);
+Route::put('/admin/products/{product_id}', [FungsiController::class, 'admin_update_product']);
