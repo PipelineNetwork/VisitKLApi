@@ -15,13 +15,17 @@
 
     <meta name="theme-color" content="#7952b3">
 
+    @include('sweetalert::alert')
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">VisitKL</a>
+            <a class="navbar-brand" href="/">
+                <img src="/logo.png" width="120" height="100" alt="">
+              </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,13 +33,13 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     {{-- <a class="nav-link" href="/about">About</a> --}}
-                    <a class="nav-link" href="/experiences">Things To Do</a>
-                    <a class="nav-link" href="/products">Products & Services</a>
-                    <a class="nav-link" href="/offers">Deals & Packages</a>
-                    <a class="nav-link" href="/gallery">Gallery</a>
-                    <a class="nav-link" href="/events">What's On</a>
-                    <a class="nav-link" href="/eform">E-Form</a>
-                    <a class="nav-link" href="/faqs">F.A.Q</a>
+                    <a class="nav-link" href="/experiences"><b>Things To Do</b></a>
+                    <a class="nav-link" href="/products"><b>Products & Services</b></a>
+                    <a class="nav-link" href="/offers"><b>Deals & Packages</b></a>
+                    <a class="nav-link" href="/gallery"><b>Gallery</b></a>
+                    <a class="nav-link" href="/events"><b>What's On</b></a>
+                    <a class="nav-link" href="/eform"><b>E-Form</b></a>
+                    <a class="nav-link" href="/faqs"><b>F.A.Q</b></a>
                 </div>
             </div>
         </div>
@@ -47,7 +51,7 @@
 
     <div class="container">
         <a href="https://www.dbkl.gov.my">
-            <img src="/footer.png" class="img-fluid" alt="...">     
+            <img src="/footer.png" class="img-fluid" alt="...">
         </a>
     </div>
 
@@ -57,12 +61,12 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <span class="text-muted">Copy Right @ Tourism Unit DBKL <br/>
-                        <a href="/admin">Administrator</a><br/>
+                    <span class="text-muted">Copy Right @ Tourism Unit DBKL <br />
+                        <a href="/admin">Administrator</a><br />
                 </div>
                 <div class="col">
-                    <span class="text-muted">Best Viewed In Internet Explorer<br/>
-                        Total Visitor: XXX <br/>                      
+                    <span class="text-muted">Best Viewed In Internet Explorer<br />
+                        Total Visitor: XXX <br />
                 </div>
             </div>
 

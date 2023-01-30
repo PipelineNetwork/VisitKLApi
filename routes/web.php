@@ -19,7 +19,9 @@ Route::put('/admin/events/{event_id}', [FungsiController::class, 'admin_update_e
 
 Route::get('/eform', [FungsiController::class, 'user_view_eform']);
 Route::post('/eform', [FungsiController::class, 'user_submit_eform']);
+
 Route::get('/admin/eform', [FungsiController::class, 'admin_view_eform']);
+Route::get('/admin/eform/{eform_id}', [FungsiController::class, 'admin_view_eform_detail']);
 
 
 Route::get('/experiences', [FungsiController::class, 'user_view_experiences']);

@@ -1,16 +1,10 @@
-@extends('public.layout')
+@extends('admin.layout')
 
 @section('title', 'Page Title')
 
 @section('content')
 
-    <form action="/eform" method="POST" enctype="multipart/form-data" class="my-5">
-        @csrf
 
-        <div class="row">
-            <div class="col-10"></div>
-            <div class="col-2"><button class="btn btn-primary" type="submit">Submit</button></div>
-        </div>
 
         <div class="row">
             <div class="col">
@@ -22,22 +16,22 @@
 
                     <div class="mb-3">
                         <label class="form-label">Event or Promotion Name</label>
-                        <input type="text" name="name" class="form-control" placeholder="Fill in here">
+                        <input type="text" disabled name="name" class="form-control" value="{{$eform->name}}">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Start Date</label><br />
-                        <input type="datetime-local" name="startdate">
+                        <input type="datetime-local" disabled name="startdate" value="{{$eform->startdate}}">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Venue</label>
-                        <input type="text" name="venue" class="form-control" placeholder="Fill in here">
+                        <input type="text" disabled name="venue" class="form-control" value="{{$eform->venue}}">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">End Date</label><br />
-                        <input type="datetime-local" name="enddate">
+                        <input type="datetime-local" disabled name="enddate" value="{{$eform->enddate}}">
                     </div>
 
 
@@ -50,7 +44,7 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Description</label>
-                        <textarea class="form-control" name="description" rows="3"></textarea>
+                        <textarea class="form-control" disabled name="description" rows="3">{{$eform->description}}</textarea>
                     </div>
                 </div>
             </div>
@@ -58,43 +52,43 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Event Type</label>
-                        <select class="form-select" name="event_type">
-                            <option value="Events" selected>Events</option>
-                            <option value="Gallery">Gallery</option>
-                            <option value="Products & Services">Products & Services</option>
-                            <option value="Deals & Packages">Deals & Packages</option>
-                        </select>
+                        <input type="text" disabled name="event_type" class="form-control" value="{{$eform->event_type}}">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Link</label>
-                        <input type="text" name="link" class="form-control">
+                        <input type="text" disabled name="link" value="{{$eform->link}}" class="form-control">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Contact No</label>
-                        <input type="text" name="contact_no" class="form-control">
+                        <input type="text" disabled name="contact_no" value="{{$eform->contact_no}}" class="form-control">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Email</label>
-                        <input type="text" name="email" class="form-control">
+                        <input type="text" disabled name="email" value="{{$eform->email}}" class="form-control">
                     </div>
                 </div>
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label">Company</label>
-                        <input type="text" name="company" class="form-control">
+                        <input type="text" disabled name="company" value="{{$eform->company}}" class="form-control">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Fax</label>
-                        <input type="text" name="fax" class="form-control">
+                        <input type="text" disabled name="fax" value="{{$eform->fax}}" class="form-control">
                     </div>
 
                     <div class="mb-3">
-                        <label for="formFileMultiple" class="form-label">Banners & Licenses</label>
-                        <input class="form-control" type="file" name="photos[]" multiple>
+                        <label for="formFileMultiple" class="form-label">Banners & Licenses</label> <br/>
+                            @foreach ($images as $image)
+                            <tr>
+                                <td><img src="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{$image->url}}" class="img-fluid" alt="..."></td>            
+                            </tr>
+                            @endforeach
+            
                     </div>
                 </div>
             </div>
@@ -102,7 +96,4 @@
         </div>
 
 
-
-
-    </form>
 @endsection
