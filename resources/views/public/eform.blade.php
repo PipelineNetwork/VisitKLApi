@@ -9,7 +9,7 @@
 
         <div class="row">
             <div class="col-10"></div>
-            <div class="col-2"><button class="btn btn-primary" type="submit">Submit</button></div>
+            <div class="col-2"><button class="btn btn-primary" style="background-color:#E51C21" type="submit">Submit</button></div>
         </div>
 
         <div class="row">
@@ -59,10 +59,16 @@
                     <div class="mb-3">
                         <label class="form-label">Event Type</label>
                         <select class="form-select" name="event_type">
-                            <option value="Events" selected>Events</option>
-                            <option value="Gallery">Gallery</option>
-                            <option value="Products & Services">Products & Services</option>
-                            <option value="Deals & Packages">Deals & Packages</option>
+                            <option value="Travel" selected>Travel</option>
+                            <option value="Accomodations">Accomodations</option>
+                            <option value="Food & Entertainment">Food & Entertainment</option>
+                            <option value="Arts & Culture">Arts & Culture</option>
+                            <option value="Places To Go">Places To Go</option>
+                            <option value="Health & Wellness">Health & Wellness</option>
+                            <option value="MICE">MICE</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Education">Education</option>
                         </select>
                     </div>
 

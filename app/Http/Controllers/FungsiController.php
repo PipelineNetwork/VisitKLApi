@@ -337,7 +337,7 @@ class FungsiController extends Controller
     public function admin_view_faq(Request $request)
     {
         $faqs = VisitklFaq::all();
-        return view('admin.faq', compact('faqs'));
+        return view('admin.faqs', compact('faqs'));
     }
 
     public function admin_create_faq(Request $request)
@@ -349,10 +349,19 @@ class FungsiController extends Controller
         return back();
     }
 
+    public function admin_view_faq_detail(Request $request)
+    {
+        $id = (int) $request->route('faq_id');
+        $faq = VisitklFaq::find($id);
+        return view('admin.faq', compact('faq'));
+    }    
+
     public function admin_update_faq(Request $request)
     {
         $id = (int) $request->route('faq_id');
         $faq = VisitklFaq::find($id);
+        $faq->question = $request->question;
+        $faq->answer = $request->answer;        
         $faq->save();
         return back();
     }

@@ -57,15 +57,15 @@
 
 
 
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-auto py-3" style="background-color:#E51C21">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <span class="text-muted">Copy Right @ Tourism Unit DBKL <br />
+                    <span class="text-white">Copy Right @ Tourism Unit DBKL <br />
                         <a href="/admin">Administrator</a><br />
                 </div>
                 <div class="col">
-                    <span class="text-muted">Best Viewed In Internet Explorer<br />
+                    <span class="text-white">Best Viewed In Internet Explorer<br />
                         Total Visitor: XXX <br />
                 </div>
             </div>

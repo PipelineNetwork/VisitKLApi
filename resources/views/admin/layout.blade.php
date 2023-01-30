@@ -19,23 +19,23 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg" style="background-color: #E51C21">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">VisitKL</a>
+            <a class="navbar-brand" class="text-white" href="/">VisitKL</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="/admin">Dashboard</a>
-                    <a class="nav-link" href="/admin/experiences">Things To Do</a>
-                    <a class="nav-link" href="/admin/products">Products & Services</a>
-                    <a class="nav-link" href="/admin/offers">Deals & Packages</a>
-                    <a class="nav-link" href="/admin/gallery">Gallery</a>
-                    <a class="nav-link" href="/admin/events">What's On</a>
-                    <a class="nav-link" href="/admin/eform">E-Form</a>
-                    <a class="nav-link" href="/admin/faqs">F.A.Q</a>
+                    <a class="nav-link text-white" href="/admin">Dashboard</a>
+                    <a class="nav-link text-white" href="/admin/experiences">Things To Do</a>
+                    <a class="nav-link text-white" href="/admin/products">Products & Services</a>
+                    <a class="nav-link text-white" href="/admin/offers">Deals & Packages</a>
+                    <a class="nav-link text-white" href="/admin/gallery">Gallery</a>
+                    <a class="nav-link text-white" href="/admin/events">What's On</a>
+                    <a class="nav-link text-white" href="/admin/eform">E-Form</a>
+                    <a class="nav-link text-white" href="/admin/faqs">F.A.Q</a>
                 </div>
             </div>
         </div>
