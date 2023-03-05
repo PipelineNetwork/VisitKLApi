@@ -1,0 +1,56 @@
+main{
+    min-height: calc(100vh - 68px - 80px);
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    min-width: 320px;
+}
+
+// Header
+.on{
+    border-bottom: 5px solid $cherry-red;
+    padding-bottom: 17.7px;
+    border-radius: 1px;
+    z-index: 100;
+}
+
+// Intro
+.intro{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__head{
+        height: fit-content;
+        margin-top: 44px;
+        margin-bottom: 42px;
+        position: relative;
+        &--info{
+            position: absolute;
+            bottom: 34px;
+            left: 470px;
+        }
+    }
+    &__text{
+        width: 1077px;
+        height: fit-content;
+        font-family: 'Eina03', sans-serif;
+        font-weight:  normal;
+        font-size: 2rem;
+        line-height: 32.77px;
+        color: $pure-black;
+        text-align: center;
+    }
+}
+
+// Ipad
+.ipad{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}

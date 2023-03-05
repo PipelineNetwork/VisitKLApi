@@ -1,0 +1,186 @@
+main{
+    min-height: calc(100vh - 68px - 80px);
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    min-width: 320px;
+}
+
+// Header
+.deals{
+    border-bottom: 5px solid $cherry-red;
+    padding-bottom: 17.7px;
+    border-radius: 1px;
+    z-index: 100;
+}
+
+// Intro
+.intro{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__head{
+        height: fit-content;
+        margin-top: 44px;
+        margin-bottom: 42px;
+        position: relative;
+    }
+    &__text{
+        width: 1077px;
+        height: fit-content;
+        font-family: 'Eina03', sans-serif;
+        font-weight:  normal;
+        font-size: 1.4rem;
+        line-height: 189.6%;
+        color: $pure-black;
+        text-align: center;
+    }
+    &__search{
+        width: 420px;
+        height: 35px;
+        border-radius: 6px;
+        opacity: 80%;
+        margin-top: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &--input{
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            border: none;
+            text-align: center;
+            background-color: $light-grey;
+        }
+        &--image{
+            position: absolute;
+            right: 75px;
+            top: calc(50% - 7.1px)
+        }
+        &--calendar{
+            margin-left: 14px;
+        }
+    }
+}
+
+// Content
+.content{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+    &__title{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 41.4px;
+        color: $pure-black;
+    }
+}
+
+// Grid
+.container{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+    &__leftArrow{
+        margin-right: 46px;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 14px;
+        grid-row-gap: 14px;
+    }
+    &__rightArrow{
+        margin-left: 46px;
+    }
+}
+
+// Cards
+.container__card{
+    width: 212px;
+    height: 410px;
+    border: 1px solid $light-grey;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    &--title{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        img{
+            margin-left: 11px;
+        }
+        h3{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 16.6px;
+            color: $pure-black;
+            margin-left: 8px;
+        }
+    }
+    &--location{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        img{
+            margin-left: 11.16px;
+        }
+        p{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 0.837rem;
+            line-height: 10.54px;
+            color: $darkest-grey;
+            margin-left: 3px;
+        }
+    }
+    &--info{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h4{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.04rem;
+            line-height: 13.7px;
+            color: $cherry-red;
+            text-align: justify;
+            margin-left: 11.16px;
+        }
+        p{
+            width: 188px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 0.976rem;
+            line-height: 14.64px;
+            color: $pure-black;
+            text-align: justify;
+            margin-left: 11.16px;
+            a{
+                color: $blue-default;
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,299 @@
+main{
+    min-height: calc(100vh - 68px - 80px);
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    min-width: 320px;
+}
+
+// Header
+.about{
+    border-bottom: 5px solid $cherry-red;
+    padding-bottom: 17.7px;
+    border-radius: 1px;
+    z-index: 100;
+}
+
+// Intro
+.intro{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__head{
+        height: fit-content;
+        margin-top: 44px;
+        margin-bottom: 42px;
+        position: relative;
+        &--info{
+            position: absolute;
+            bottom: 34px;
+            left: 470px;
+        }
+    }
+    &__text{
+        width: 1077px;
+        height: fit-content;
+        font-family: 'Eina03', sans-serif;
+        font-weight:  normal;
+        font-size: 1.4rem;
+        line-height: 26.54px;
+        color: $pure-black;
+        text-align: center;
+    }
+}
+
+// Mayor
+.mayor{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 73px;
+    &__content{
+        width: fit-content;
+        height: fit-content;
+        margin-left: 50px;
+        &--text{
+            width: 600px;
+            height: 495px;
+            margin-left: 20px;
+            margin-right: 46px;
+            font-family: 'Eina01', sans-serif;
+            font-weight: normal;
+            font-size: 1.2rem;
+            line-height: 14px;
+            color: $pure-black;
+            text-align: justify;
+        }
+        &--button{
+            width: 302px;
+            height: 46px;
+            margin-left: 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: $cherry-red;
+            text-align: center;
+            font-family: 'Eina04', sans-serif;
+            font-size: 1.4rem;
+            line-height: 16.41px;
+            font-weight: bold;
+            color: $pure-white;
+            transition: all 0.25s ease-in-out;
+        }
+    }
+    &__image{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &--title{
+            font-family: 'Eina01', sans-serif;
+            font-weight: bold;
+            font-size: 2rem;
+            color: $biru;
+            text-align: right;
+            margin-top: 34.64px;
+        }
+        &--text{
+            font-family: 'Eina01', sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: $biru;
+            text-align: right;
+            margin-top: -5px;
+        }
+    }
+}
+.mayor__content--button:hover{
+    cursor: pointer;
+    background-color: $biru;
+    color: $pure-white;
+}
+
+// Logo
+.logo{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 76px;
+    &__image{
+        margin-left: 44px;
+        margin-right: 46px;
+    }
+    &__content{
+        &--title{
+            margin-bottom: 16px;
+        }
+        &--text{
+            width: 630px;
+            height: 180px;
+            font-family: 'Eina01', sans-serif;
+            font-weight: normal;
+            font-size: 1.5rem;
+            line-height: 18px;
+            color: $pure-black;
+            text-align: justify;
+            margin-left: 16px;
+        }
+    }
+}
+
+// Rationale
+.rationale{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 138px;
+    &__title{
+        font-family: 'Eina01', sans-serif;
+        font-weight: bold;
+        font-size: 8rem;
+        line-height: 80px;
+        color: $cherry-red;
+        text-align: left;
+        margin-left: 87px;
+        margin-right: 92px;
+        margin-top: -82px;
+    }
+    &__content{
+        width: 615px;
+        height: 243px;
+        display: flex;
+        justify-content: center;
+        &--text{
+            width: 615px;
+            height: 243px;
+            font-family: 'Eina01', sans-serif;
+            font-weight: normal;
+            font-size: 1.5rem;
+            line-height: 18px;
+            color: $pure-black;
+            text-align: justify;
+            margin-right: 44px;
+        }
+    }
+}
+
+// Info
+.info{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    &__text{
+        width: 1070px;
+        height: 400px;
+        font-family: 'Eina01', sans-serif;
+        font-weight: normal;
+        font-size: 2rem;
+        line-height: 23.44px;
+        color: $pure-black;
+        text-align: justify;
+    }
+}
+
+// Logo parts
+.parts{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        &--wrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 17px
+        }
+    }
+}
+
+// Variants
+.variants{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 105px;
+    &__text{
+        width: 1070px;
+        height: 68px;
+        font-family: 'Eina01', sans-serif;
+        font-weight: normal;
+        font-size: 2rem;
+        line-height: 23.44px;
+        color: $pure-black;
+        text-align: justify;
+    }
+    &__wrapper{
+        width: fit-content;
+        height: fit-content;
+        margin-top: 90px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        &--item{
+            width: 248px;
+            height: 436px;
+            border-radius: 10px;
+            border: none;
+            background-color: $cherry-red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            img{
+                margin-left: 36px;
+                margin-right: 36px;
+                margin-bottom: 33px;
+            }
+            &__content{
+                width: 202px;
+                height: 143px;
+                h3{
+                    font-family: 'Eina02', sans-serif;
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    line-height: 21px;
+                    color: $pure-white;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-family: 'Eina01', sans-serif;
+                    font-weight: normal;
+                    font-size: 1.2rem;
+                    line-height: 14px;
+                    color: $pure-white;
+                    text-align: center;
+                }
+            }
+        }        
+    }
+}
