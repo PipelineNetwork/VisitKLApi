@@ -243,6 +243,7 @@ class FungsiController extends Controller
         $product->description = $request->description;
         $product->location = $request->location;
         $product->link = $request->link;
+        $product->image = $request->file('image')->store('visitkl/image');
         $product->save();
         return back();
     }
@@ -294,6 +295,7 @@ class FungsiController extends Controller
         $offer->description = $request->description;
         $offer->location = $request->location;
         $offer->link = $request->link;
+        $offer->image = $request->file('image')->store('visitkl/image');
         $offer->save();
         return back();
     }

@@ -59,158 +59,29 @@
                 <img class="container__leftArrow" src="/figma/src/icons/arrow_left_inactive.svg" alt="left arrow"/>
 
                 <div class="container__wrapper">
+
+                    @foreach($products as $product)
                     <article class="container__card">
                         <img class="container__card--image" src="/figma/src/images/low_yat_plaza_image.png" alt="low yat plaza"/>
     
                         <div class="container__card--title">
-                            <img src="/figma/src/images/low_yat_related.png" alt="low yat plaza related"/>
-                            <h3>Low Yat Plaza</h3>
+                            <img src="{{$product->image}}" alt="low yat plaza related"/>
+                            <h3>{{$product->title}}</h3>
                         </div>
     
                         <div class="container__card--location">
                             <img src="/figma/src/icons/location_cherry.svg" alt="location"/>
-                            <p>7, Jalan Bintang, Bukit Bintang, 55100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia</p>
+                            <p>{{$product->location}}</p>
                         </div>
     
                         <div class="container__card--info">
                             <h4>About this Product & Services</h4>
-                            <p>Plaza Low Yat is the oldest shopping centre specializing in electronics and IT products in Kuala Lumpur, Malaysia. In 2009, Plaza Low Yat was named “Malaysia’s Largest IT Lifestyle Centre”<br/> <a href="https://www.pelago.co/en-MY/activity/phn49-aquaria-klcc-kuala-lumpur/?utm_source=google&utm_medium=cpc&utm_campaign=acq-gg-apac-my_-_my-my-en-kw-prod-activities-exact&utm_term=prod_aquaria-klcc&utm_content=aquaria%20klcc&gclid=Cj0KCQjwnP-ZBhDiARIsAH3FSRceH_VoRNEUaK28TOSZoQl5O9bruW4nWFp-lq05-GRZ5j0cYb63BaYaAgpSEALw_wcB" target="_blank" rel="noopener noreferrer">See more...</a> </p>
+                            <p>{{$product->description}}<br/> <a href="{{$product->link}}" target="_blank" rel="noopener noreferrer">See more...</a> </p>
                         </div>
                     </article>
+                    @endforeach
 
-                    <article class="container__card">
-                        <img class="container__card--image" src="/figma/src/images/museum_main.png" alt="National Museum of Malaysia"/>
-    
-                        <div class="container__card--title">
-                            <img src="/figma/src/images/museum_related.png" alt="National Museum of Malaysia"/>
-                            <h3>National Museum <br/>of Malaysia</h3>
-                        </div>
-    
-                        <div class="container__card--location">
-                            <img src="/figma/src/icons/location_cherry.svg" alt="location"/>
-                            <p>Jabatan Muzium Malaysia, Jln Damansara, Perdana Botanical Gardens, 50566 Kuala Lumpur, Federal Territory of Kuala Lumpur</p>
-                        </div>
-    
-                        <div class="container__card--info">
-                            <h4>About this Product & Services</h4>
-                            <p>The National Museum is a museum located on Jalan Damansara in Kuala Lumpur, Malaysia. The museum is situated in close proximity to the Perdana Lake Gardens and it provides<br/> <a href="https://www.pelago.co/en-MY/activity/pj32k-pelago-exclusive--sunway-lagoon--night-of-frights-8-kuala-lumpur/" target="_blank" rel="noopener noreferrer">See more...</a></p>
-                        </div>
-                    </article>
-
-                    <article class="container__card">
-                        <img class="container__card--image" src="/figma/src/images/library_main.png" alt="National Library of Malaysia"/>
-    
-                        <div class="container__card--title">
-                            <img src="/figma/src/images/library_related.png" alt="National Library of Malaysia related"/>
-                            <h3>National Library <br/>of Malaysia</h3>
-                        </div>
-    
-                        <div class="container__card--location">
-                            <img src="/figma/src/icons/location_cherry.svg" alt="location"/>
-                            <p>232, Jln Tun Razak, Titiwangsa, 50572 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
-                        </div>
-    
-                        <div class="container__card--info">
-                            <h4>About this Product & Services</h4>
-                            <p>The National Library of Malaysia is a library established under the National Library Act 1972 in Kuala Lumpur, Malaysia. The National Library is responsible for providing a collection<br/> <a href="https://www.pelago.co/en-MY/activity/pbuw3-zoo-negara-malaysia-kuala-lumpur/?utm_source=google&utm_medium=cpc&utm_campaign=acq-gg-apac-my_-_my-my-en-kw-prod-activities-exact&utm_term=prod_zoo-negara&utm_content=zoo%20negara&gclid=Cj0KCQjw-fmZBhDtARIsAH6H8qivK19PxzqnotGAyiH9UCqOasxwv_fN4l8EKymZSZwVxO81Vzh947caApgZEALw_wcB" target="_blank" rel="noopener noreferrer">See more...</a> </p>
-                        </div>
-                    </article>
-
-                    <article class="container__card">
-                        <img class="container__card--image" src="/figma/src/images/craft_main.png" alt="Kuala Lumpur Craft Complex"/>
-    
-                        <div class="container__card--title">
-                            <img src="/figma/src/images/craft_related.png" alt="Kuala Lumpur Craft Complex related"/>
-                            <h3>Kuala Lumpur <br/>Craft Complex</h3>
-                        </div>
-    
-                        <div class="container__card--location">
-                            <img src="/figma/src/icons/location_cherry.svg" alt="location"/>
-                            <p>Kompleks Kraf, 5, Jalan Conlay, Kuala Lumpur, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
-                        </div>
-    
-                        <div class="container__card--info">
-                            <h4>About this Product & Services</h4>
-                            <p>The Kuala Lumpur Craft Complex is an iconic art tourism destination located in the heart of the city. This one-stop craft centre offers a myriad of tourism products such as arts and crafts for local and foreign visitors. <a href="https://www.kraftangan.gov.my/en/" target="_blank" rel="noopener noreferrer">See more...</a> </p>
-                        </div>
-                    </article>
-
-                    <article class="container__card">
-                        <img class="container__card--image" src="/figma/src/images/pasar_main.png" alt="Pasar Seni"/>
-    
-                        <div class="container__card--title">
-                            <img src="/figma/src/images/pasar_related.png" alt="Pasar Seni related"/>
-                            <h3>Pasar Seni</h3>
-                        </div>
-    
-                        <div class="container__card--location">
-                            <img src="/figma/src/icons/location_cherry.svg" alt="location"/>
-                            <p>Central Market, Kuala Lumpur City Centre, 50050 Kuala Lumpur, Federal Territory of Kuala Lumpur</p>
-                        </div>
-    
-                        <div class="container__card--info">
-                            <h4>About this Product & Services</h4>
-                            <p>Central Market Kuala Lumpur is a centre for Malaysian culture, art and craft located in the heart of the city. As a building with significant historical value Central Market Kuala Lumpur has come a long way... <a href="https://www.centralmarket.com.my/" target="_blank" rel="noopener noreferrer">See more...</a> </p>
-                        </div>
-                    </article>
-
-                    <article class="container__card">
-                        <img class="container__card--image" src="/figma/src/images/local_food_main.png" alt="Best Local Food Tour by Night"/>
-    
-                        <div class="container__card--title">
-                            <img src="/figma/src/images/local_food_related.png" alt="Best Local Food Tour by Night related"/>
-                            <h3>Best Local Food <br/>Tour by Night</h3>
-                        </div>
-    
-                        <div class="container__card--location">
-                            <img src="/figma/src/icons/location_cherry.svg" alt="location"/>
-                            <p>Lot No. LTC/T3(A), Bintang Terrace, Lot10 Shopping Centre, 50, Bukit Bintang St, 55100 Wilayah Persekutuan, Federal Territory of Kuala Lumpur</p>
-                        </div>
-    
-                        <div class="container__card--info">
-                            <h4>About this Product & Services</h4>
-                            <p>No visit to Kuala Lumpur would be complete without sampling its three delicious culinary traditions: Indian, Chinese, and Malay. This great-value private tour is just like having your own local friend... <a href="https://www.tripadvisor.com.my/AttractionProductReview-g298570-d11807013-Kuala_Lumpur_Local_Street_Food_Private_Walking_Tour_by_Night-Kuala_Lumpur_Wilayah_.html" target="_blank" rel="noopener noreferrer">See more...</a> </p>
-                        </div>
-                    </article>
-
-                    <article class="container__card">
-                        <img class="container__card--image" src="/figma/src/images/bus_main.png" alt="GO KL City Bus"/>
-    
-                        <div class="container__card--title">
-                            <img src="/figma/src/images/bus_related.png" alt="GO KL City Bus related"/>
-                            <h3>GO KL City Bus</h3>
-                        </div>
-    
-                        <div class="container__card--location">
-                            <img src="/figma/src/icons/location_cherry.svg" alt="location"/>
-                            <p>2, Jalan Stesen Sentral Block D, Platinum Sentral, Kuala Lumpur Sentral, Kuala Lumpur 50470, Malaysia</p>
-                        </div>
-    
-                        <div class="container__card--info">
-                            <h4>About this Product & Services</h4>
-                            <p>Go-KL City Bus is a free bus service, which is operated by the Land Public Transport Commission (SPAD). These single-decker busses are easily identifiable from its colour (pink) and is a comfortable and convenient option for travellers. <a href="https://www.tripadvisor.com.my/Attraction_Review-g298570-d6652603-Reviews-GO_KL_City_Bus-Kuala_Lumpur_Wilayah_Persekutuan.html" target="_blank" rel="noopener noreferrer">See more...</a> </p>
-                        </div>
-                    </article>
-
-                    <article class="container__card">
-                        <img class="container__card--image" src="/figma/src/images/gallery_main.png" alt="Jadi Batek Gallery"/>
-    
-                        <div class="container__card--title">
-                            <img src="/figma/src/images/gallery_related.png" alt="Jadi Batek Gallery related"/>
-                            <h3>Jadi Batek Gallery</h3>
-                        </div>
-    
-                        <div class="container__card--location">
-                            <img src="/figma/src/icons/location_cherry.svg" alt="location"/>
-                            <p>30, Jalan Inai, Off Jalan Imbi, 55100 Kuala Lumpur, Malaysia</p>
-                        </div>
-    
-                        <div class="container__card--info">
-                            <h4>About this Product & Services</h4>
-                            <p>Jadi Batek has been in the industry for over four decades with experiences in the local Batik art heritage and prides in our wealth of knowledge in the field amongst many others. <a href="https://www.jadibatekpromotion.com/physical-batik-workshop?gclid=Cj0KCQjwy5maBhDdARIsAMxrkw0SVxEld7bWpX7wC1CQdJKfhaYeERrp-1EVvYMKGysftHpVZOYtjzYaAhx8EALw_wcB" target="_blank" rel="noopener noreferrer">See more...</a> </p>
-                        </div>
-                    </article>
-
+     
                     
                 </div>
 

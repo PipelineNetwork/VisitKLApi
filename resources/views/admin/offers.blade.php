@@ -26,7 +26,13 @@
         <div class="mb-3 col-4">
             <label class="form-label">Description</label>
             <textarea class="form-control" name="description" rows="3"></textarea>
-        </div>           
+        </div>  
+
+        <div class="mb-3 col-4">
+            <label class="form-label">Image</label>
+            <input type="file"  name="image" required/>
+        </div>          
+      
 
         <button class="btn btn-primary" type="submit">Create Offer</button>        
     </form>
