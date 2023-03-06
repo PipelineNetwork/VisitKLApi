@@ -18,15 +18,15 @@
             </div>
             <div class="nav__container">
                 <div class="nav__container--wrapper">
-                    <a class="nav__container--wrapper__link home" href="/figma/index.html">HOME</a>
-                    <a class="nav__container--wrapper__link about" href="/figma/pages/about.html">ABOUT US</a>
-                    <a class="nav__container--wrapper__link todo" href="/figma/pages/todo/places.html">THINGS TO DO</a>
-                    <a class="nav__container--wrapper__link products" href="/figma/pages/products.html">PRODUCTS & SERVICES</a>
-                    <a class="nav__container--wrapper__link deals" href="/figma/pages/deals.html">DEALS & PACKAGES</a>
-                    <a class="nav__container--wrapper__link gallery" href="/figma/pages/gallery.html">GALLERY</a>
-                    <a class="nav__container--wrapper__link on" href="/figma/pages/whats-on.html">WHAT'S ON</a>
-                    <a class="nav__container--wrapper__link form" href="/figma/pages/e-form.html">E-FORM</a>
-                    <a class="nav__container--wrapper__link faq" href="/figma/pages/faq.html">FAQ</a>
+                    <a class="nav__container--wrapper__link home" href="/">HOME</a>
+                    <a class="nav__container--wrapper__link about" href="/about">ABOUT US</a>
+                    <a class="nav__container--wrapper__link todo" href="/">THINGS TO DO</a>
+                    <a class="nav__container--wrapper__link products" href="/">PRODUCTS & SERVICES</a>
+                    <a class="nav__container--wrapper__link deals" href="/">DEALS & PACKAGES</a>
+                    <a class="nav__container--wrapper__link gallery" href="/">GALLERY</a>
+                    <a class="nav__container--wrapper__link on" href="/">WHAT'S ON</a>
+                    <a class="nav__container--wrapper__link form" href="/eform">E-FORM</a>
+                    <a class="nav__container--wrapper__link faq" href="/faq">FAQ</a>
                 </div>
                 <div class="nav__container--wrapper">
                     <hr class="nav__container--wrapper__line"/>
