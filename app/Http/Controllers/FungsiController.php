@@ -91,9 +91,11 @@ class FungsiController extends Controller
     {
         $eform = new VisitklEform;
         $eform->name = $request->name;
-        $eform->startdate = $request->startdate;
+        $eform->date_start = $request->date_start;
+        $eform->date_end = $request->date_end;
+        $eform->time_start = $request->time_start;
+        $eform->time_end = $request->time_end;        
         $eform->venue = $request->venue;
-        $eform->enddate = $request->enddate;
         $eform->event_type = $request->event_type;
         $eform->description = $request->description;
 
@@ -102,19 +104,10 @@ class FungsiController extends Controller
         $eform->fax = $request->fax;
         $eform->company = $request->company;
         $eform->email = $request->email;
-
+        $eform->banner = $request->file('banner')->store('visitkl/banner');
+        $eform->license = $request->file('license')->store('visitkl/license');
         $eform->save();
 
-        $files = $request->file('photos');
-        foreach ($files as $file) {
-            $filename = $file->getClientOriginalName();
-            $extension = $file->getClientOriginalExtension();
-            $filename = $file->store('visitkl');
-            $image = new VisitklEformImage;      
-            $image->eform_id = $eform->id;
-            $image->url = $filename;   
-            $image->save();   
-        }
         Alert::success('E-Form', 'Form has succcessfully submitted!');
         return back();
     }

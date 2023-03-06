@@ -35,7 +35,8 @@
         </nav>
     </header>
     <main>
-        <form class="intro">
+        <form class="intro" method="POST" action="/eform" enctype="multipart/form-data">
+            @csrf
             <div class="intro__buttons">
                 <input type="submit" value="Submit" class="intro__buttons--submit"/>
                 <img class="intro__buttons--reload" src="/figma/src/icons/reload_cherry_good-form.png" alt="reload" />
@@ -79,7 +80,7 @@
                         </label>
                         <label class="form__container--fill" for="time-end">
                             <span>End Time</span>
-                            <input type="time" id="time-end" name="time_start" placeholder="10 pm" required></input>
+                            <input type="time" id="time-end" name="time_end" placeholder="10 pm" required></input>
                         </label>
                     </div>
                 </div>
