@@ -241,6 +241,7 @@ class FungsiController extends Controller
         $product = new VisitklProduct;
         $product->title = $request->title;
         $product->description = $request->description;
+        $product->location = $request->location;
         $product->link = $request->link;
         $product->save();
         return back();
@@ -250,6 +251,10 @@ class FungsiController extends Controller
     {
         $id = (int) $request->route('product_id');
         $product = VisitklProduct::find($id);
+        $product->title = $request->title;
+        $product->description = $request->description;
+        $product->location = $request->location;
+        $product->link = $request->link;        
         $product->save();
         return back();
     }
@@ -287,6 +292,7 @@ class FungsiController extends Controller
         $offer = new VisitklOffer;
         $offer->title = $request->title;
         $offer->description = $request->description;
+        $offer->location = $request->location;
         $offer->link = $request->link;
         $offer->save();
         return back();
@@ -296,6 +302,10 @@ class FungsiController extends Controller
     {
         $id = (int) $request->route('offer_id');
         $offer = VisitklOffer::find($id);
+        $offer->title = $request->title;
+        $offer->description = $request->description;
+        $offer->location = $request->location;
+        $offer->link = $request->link;        
         $offer->save();
         return back();
     }

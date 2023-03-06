@@ -17,6 +17,11 @@
             <label class="form-label">Link</label>
             <input type="text" name="link" class="form-control">
         </div>    
+
+        <div class="mb-3 col-4">
+            <label class="form-label">Location</label>
+            <input type="text" name="location" class="form-control">
+        </div>             
         
         <div class="mb-3 col-4">
             <label class="form-label">Description</label>
@@ -34,6 +39,7 @@
                 <th scope="col">Name</th>                
                 <th scope="col">Description</th>        
                 <th scope="col">Link</th>
+                <th scope="col">Location</th>
             </tr>
         </thead>
         <tbody>
@@ -42,6 +48,7 @@
                 <td>{{$offer->title}}</td>
                 <td>{{$offer->description}}</td>
                 <td><a href="{{ $offer->link }}">Link</a></td>
+                <td>{{$offer->location}}</td>
             </tr>
             @endforeach
         </tbody>

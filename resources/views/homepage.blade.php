@@ -21,8 +21,8 @@
                     <a class="nav__container--wrapper__link home" href="/">HOME</a>
                     <a class="nav__container--wrapper__link about" href="/about">ABOUT US</a>
                     <a class="nav__container--wrapper__link todo" href="/">THINGS TO DO</a>
-                    <a class="nav__container--wrapper__link products" href="/">PRODUCTS & SERVICES</a>
-                    <a class="nav__container--wrapper__link deals" href="/">DEALS & PACKAGES</a>
+                    <a class="nav__container--wrapper__link products" href="/products">PRODUCTS & SERVICES</a>
+                    <a class="nav__container--wrapper__link deals" href="/offers">DEALS & PACKAGES</a>
                     <a class="nav__container--wrapper__link gallery" href="/">GALLERY</a>
                     <a class="nav__container--wrapper__link on" href="/">WHAT'S ON</a>
                     <a class="nav__container--wrapper__link form" href="/eform">E-FORM</a>

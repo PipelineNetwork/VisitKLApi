@@ -45,7 +45,7 @@
 
             <label class="intro__search">
                 <input class="intro__search--input" type="text" placeholder="What Are You Looking For?" />
-                <img class="intro__search--image" src="/figma/../src/icons/search_black.svg" alt="search magnifying glass"/>
+                <img class="intro__search--image" src="/figma/src/icons/search_black.svg" alt="search magnifying glass"/>
             </label>
         </section>
 
