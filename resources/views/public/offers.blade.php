@@ -60,22 +60,22 @@
 
                 <div class="container__wrapper">
 
-                    @foreach($products as $product)
+                    @foreach($offers as $offer)
                     <article class="container__card">
-                        <img class="container__card--image" src="{{$product->}}" alt="Aquaria KLCC Tickets"/>
+                        <img class="container__card--image" src="{{$offer->image}}" alt="Aquaria KLCC Tickets"/>
     
                         <div class="container__card--title">
-                            <h3>Aquaria KLCC <br/>Tickets</h3>
+                            <h3>{{$offer->title}}</h3>
                         </div>
     
                         <div class="container__card--location">
                             <img src="/figma/src/icons/location_cherry.svg" alt="location"/>
-                            <p>Aquaria KLCC, Jalan Pinang, Kuala Lumpur City Centre, Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia</p>
+                            <p>{{$offer->location}}</p>
                         </div>
     
                         <div class="container__card--info">
                             <h4>About this Deals & Packages</h4>
-                            <p>See the world's most exotic water and land animals at Aquaria KLCC's 60,000-square-foot oceanarium consisting of 15 exhibits over eight areas <a href="https://www.pelago.co/en-MY/activity/phn49-aquaria-klcc-kuala-lumpur/?utm_source=google&utm_medium=cpc&utm_campaign=acq-gg-apac-my_-_my-my-en-kw-prod-activities-exact&utm_term=prod_aquaria-klcc&utm_content=aquaria%20klcc&gclid=Cj0KCQjwnP-ZBhDiARIsAH3FSRceH_VoRNEUaK28TOSZoQl5O9bruW4nWFp-lq05-GRZ5j0cYb63BaYaAgpSEALw_wcB" target="_blank" rel="noopener noreferrer">See more...</a> </p>
+                            <p>{{$offer->location}} <a href="{{$offer->link}}" target="_blank" rel="noopener noreferrer">See more...</a> </p>
                         </div>
                     </article>
                     @endforeach
