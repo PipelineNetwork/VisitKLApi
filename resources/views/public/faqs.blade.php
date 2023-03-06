@@ -50,86 +50,16 @@
         </section>
 
         <section class="faqs">
+
+            @foreach($faqs as $faq)
             <div class="faqs__question">
-                <p>What is Kuala Lumpur, Malaysia known for?</p>
+                <p>{{$faq->question}}</p>
                 <img src="/figma/src/icons/chevron_down.svg" alt="chevron down"/>
             </div>
             <article class="faqs__answer">
-                <p>The capital of Malaysia is widely recognized for numerious landmarks, including Petronas Twin Towers (twin skyscraperss with a sky bridge and observation deck), and the Petaling Street flea market.</p>
+                <p>{{$faq->answer}}</p>
             </article>
-
-
-            <div class="faqs__question">
-                <p>What Is The Best Season To Visit Kuala Lumpur?</p>
-                <img src="/figma/src/icons/chevron_down.svg" alt="chevron down"/>
-            </div>
-            <article class="faqs__answer">
-                <p>Kuala Lumpur can be visited at other periods than the typhoon season from June to July. The equator is not far from Kuala Lumpur. All year round, the weather is hot, humid, and there is a big chnage in temperature between day and night. Malaysia has three ‘shopping carnivals’ a year in March, August, and October. Everything and almost every store has discounts. Travelling to Christmas and Easter a week before and after is not advised because of high traffic and you should also avoid Muslim Ramadan and Chinese New Year.</p>
-            </article>
-
-            <div class="faqs__question">
-                <p>What Currency Is Used In Kuala Lumpur?</p>
-                <img src="/figma/src/icons/chevron_down.svg" alt="chevron down"/>
-            </div>
-            <article class="faqs__answer">
-                <p>Kuala Lumpur is the capital of Malaysia and uses Malaysian currency. The official name of RM is Malaysian Ringgit.</p>
-            </article>
-
-            <div class="faqs__question">
-                <p>what’s The Best Cellular Service For Tourists In KL?</p>
-                <img src="/figma/src/icons/chevron_down.svg" alt="chevron down"/>
-            </div>
-            <article class="faqs__answer">
-                <p>Celcom, Maxis, DiGi and Telekom Cellular are among the most popular prepaid providers. Celcom service providers sell a local pre-paid SIM card that is compatible with international cellular phones. Incoming calls are always free, but outgoing calls are charged at peak and off-peak rates.</p>
-            </article>
-
-            <div class="faqs__question">
-                <p>Is It Legal To Consume Alcohol In Kuala Lumpur?</p>
-                <img src="/figma/src/icons/chevron_down.svg" alt="chevron down"/>
-            </div>
-            <article class="faqs__answer">
-                <p>The legal drinking and purchasing age for alcohol is 18 years old. Liquor is sold in pubs, supermarkets, and convenience stores, While most nightclubs close at 1 a.m, there are some that stay open till later.</p>
-            </article>
-
-            <div class="faqs__question">
-                <p>Do We Need A Custom Visa To Travel In Kuala Lumpur?</p>
-                <img src="/figma/src/icons/chevron_down.svg" alt="chevron down"/>
-            </div>
-            <article class="faqs__answer">
-                <p>
-                    To visit Malaysia, you must obtain a visa. To apply for a visa, contant your nearest Malaysian consulate. The processing period varies based on the city from which you apply. Passports must be valid for at least six months from the date of entry into Malaysia.<br/><br/>
-
-                    There are no restrictions on the quantity of foreign currency notes or travellers cheques that can be brought into the nation. Amounts over RM10,000 or its equivalent in foreign currency, on the other hand, must be declared. Travellers are permitted to bring up to 1 litre of alcohol and 1 carton of cigarettes without paying duty; quantities in excess of this amount are subject to local taxes. Malaysia maintains a stringent anti-drug policy, including the death penalty for convicted drug traffickers.
-                </p>
-            </article>
-
-            <div class="faqs__question">
-                <p>Is It Safe To Travel In Kuala Lumpur?</p>
-                <img src="/figma/src/icons/chevron_down.svg" alt="chevron down"/>
-            </div>
-            <article class="faqs__answer">
-                <p>Despite the city’s low crime rate, pickpocketing remains a concern. Be aware of snatch thieves’, who are known to ride motorcycles through KL’s congested streets, Women should keep an eye on their handbags. It is best to place your passport, flight tickets, extra cash and travllers cheques, as well as any extra credit or ATM cards, in the hotel safe the moment y9ou check in. When travelling by noctural train or bus, keep a tight eye on your personal things.</p>
-            </article>
-
-            <div class="faqs__question">
-                <p>Is It Easy To Find Halal Food In Malaysia?</p>
-                <img src="/figma/src/icons/chevron_down.svg" alt="chevron down"/>
-            </div>
-            <article class="faqs__answer">
-                <p>The majority of the cuisine in Kuala Lumpur is halal, although there may be a few restaurants/stalls that are not. They are usually plainly labelled as ‘serves pork’ or ‘non-halal’</p>
-            </article>
-
-            <div class="faqs__question">
-                <p>When Is Flood Season In Kuala Lumpur?</p>
-                <img src="/figma/src/icons/chevron_down.svg" alt="chevron down"/>
-            </div>
-            <article class="faqs__answer">
-                <p>
-                    Even during the monsoon season in Kuala Lumpur, rainfall is unpredictable. Kuala Lumpur experiences two monsoon seasons, one known as the east monsoons and the other as the west monsoons. The eastern monsoons arrive in the city between October and January, while the western monsoons arrive between march and April. It goes without saying that visiting Kuala Lumpur during the monsoon season is not a good idea unless you want to get rained over. <br /><br />
-
-                    The eastern monsoons are lighter showers that come and go, whereas the western monsoons anre heavier and provide the greatest rain. March and April are also the wettest months in the city, making them the city’s “primary” monsoon season. The temperature in Kuala Lumpur is often humid, and showers are always conceivable; nevertheless, if you do experience one, it is unlikely to ruin your day; in fact, you may even love it!
-                </p>
-            </article>
+            @endforeach
         </section>
 
         <section class="links">
