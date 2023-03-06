@@ -318,7 +318,12 @@ class FungsiController extends Controller
     public function user_view_gallery()
     {
         $items = VisitklGalleryItem::all();
-        return view('public.items', compact('items'));
+        $cultures = VisitklGalleryItem::where('category', 'Culture & Festival')->get();
+        $landmarks = VisitklGalleryItem::where('category', 'Landmark')->get();
+        $architectures = VisitklGalleryItem::where('category', 'Architecture')->get();
+        $peoples = VisitklGalleryItem::where('category', 'People')->get();
+        $skyscrapers = VisitklGalleryItem::where('category', 'Skyscraper')->get();          
+        return view('public.items', compact('items', 'cultures', 'landmarks', 'architectures', 'peoples', 'skyscrapers'));
     }
 
     public function user_view_gallery_item(Request $request)
@@ -330,14 +335,14 @@ class FungsiController extends Controller
 
     public function admin_view_gallery()
     {
-        $items = VisitklGalleryItem::all();
+        $items = VisitklGalleryItem::all();      
         return view('admin.items', compact('items'));
     }
 
     public function admin_view_gallery_item(Request $request)
     {
         $id = (int) $request->route('item_id');
-        $item = VisitklGalleryItem::find($id);
+        $item = VisitklGalleryItem::find($id);      
         return view('admin.item', compact('item'));
     }
 
@@ -346,6 +351,7 @@ class FungsiController extends Controller
         $item = new VisitklGalleryItem;
         $item->title = $request->title;
         $item->category = $request->category;
+        $item->image = $request->file('image')->store('visitkl/image');
         $item->save();
         return back();
     }

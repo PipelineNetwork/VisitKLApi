@@ -45,6 +45,7 @@
                 <tr>
                     <th scope="col">Title</th>
                     <th scope="col">Category</th>
+                    <th scope="col">Image</th>
    
                 </tr>
             </thead>
@@ -53,6 +54,7 @@
                 <tr>
                     <td>{{$item->title}}</td>
                     <td>{{$item->category}}</td>
+                    <td><a href="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{$item->image}}">Link</a></td>
                 </tr>
                 @endforeach
             </tbody>
