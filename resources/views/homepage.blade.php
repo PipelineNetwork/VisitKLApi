@@ -26,7 +26,7 @@
                     <a class="nav__container--wrapper__link gallery" href="/">GALLERY</a>
                     <a class="nav__container--wrapper__link on" href="/">WHAT'S ON</a>
                     <a class="nav__container--wrapper__link form" href="/eform">E-FORM</a>
-                    <a class="nav__container--wrapper__link faq" href="/faq">FAQ</a>
+                    <a class="nav__container--wrapper__link faq" href="/faqs">FAQ</a>
                 </div>
                 <div class="nav__container--wrapper">
                     <hr class="nav__container--wrapper__line"/>
