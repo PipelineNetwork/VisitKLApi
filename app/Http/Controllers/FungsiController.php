@@ -96,6 +96,7 @@ class FungsiController extends Controller
         $eform->time_start = $request->time_start;
         $eform->time_end = $request->time_end;        
         $eform->venue = $request->venue;
+        $eform->eform_type = $request->eform_type;
         $eform->event_type = $request->event_type;
         $eform->description = $request->description;
 

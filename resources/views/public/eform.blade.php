@@ -59,6 +59,16 @@
                         <span>Event or Promotion Name</span>
                         <input type="text" id="event" name="name" placeholder="Fun Run With KL" required></input>
                     </label>
+                    <label class="form__container--fill" for="event">
+                        <span>E-Form Tab</span>
+                        <select class="form__container--fill__select" name="eform_type" id="event-list" required>
+                            <option class="form__container--fill__option" value="" disabled selected>Choose one</option>
+                            <option class="form__container--fill__option" value="event">Event</option>
+                            <option class="form__container--fill__option" value="deals">Deals & Packages</option>
+                            <option class="form__container--fill__option" value="products">Products & Services</option>
+                            <option class="form__container--fill__option" value="gallery">Gallery</option>
+                          </select>
+                    </label>                    
                     <div class="intro__form--mid">
                         <label class="form__container--fill" for="date-start">
                             <span>Start Date</span>

@@ -9,6 +9,7 @@
         <thead>
             <tr>
                 <th scope="col">Name</th>
+                <th scope="col">Type</th>
                 <th scope="col">Venue</th>
                 <th scope="col">Event Type</th>
                 <th scope="col">Submitted At</th>
@@ -18,6 +19,7 @@
             @foreach ($eforms as $eform)
             <tr>
                 <td><a href="/admin/eform/{{$eform->id}}">{{$eform->name}}</a></td>
+                <td>{{$eform->eform_type}}</td>
                 <td>{{$eform->venue}}</td>
                 <td>{{$eform->event_type}}</td>
                 <td>{{$eform->created_at}}</td>
