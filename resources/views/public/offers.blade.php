@@ -62,7 +62,7 @@
 
                     @foreach($offers as $offer)
                     <article class="container__card">
-                        <img class="container__card--image" src="{{$offer->image}}" alt="Aquaria KLCC Tickets"/>
+                        <img class="container__card--image" src="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{$offer->image}}" alt="Aquaria KLCC Tickets"/>
     
                         <div class="container__card--title">
                             <h3>{{$offer->title}}</h3>

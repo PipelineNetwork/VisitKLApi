@@ -62,7 +62,7 @@
 
                     @foreach($products as $product)
                     <article class="container__card">
-                        <img class="container__card--image" src="/figma/src/images/low_yat_plaza_image.png" alt="low yat plaza"/>
+                        <img class="container__card--image" src="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{$product->image}}" alt="low yat plaza"/>
     
                         <div class="container__card--title">
                             <img src="{{$product->image}}" alt="low yat plaza related"/>
