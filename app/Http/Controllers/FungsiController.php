@@ -87,6 +87,11 @@ class FungsiController extends Controller
         return view('public.eform');
     }
 
+    public function user_view_eform_gallery()
+    {
+        return view('public.eform_gallery');
+    }    
+
     public function user_submit_eform(Request $request)
     {
         $eform = new VisitklEform;
@@ -101,6 +106,9 @@ class FungsiController extends Controller
         $eform->description = $request->description;
 
         $eform->link = $request->link;
+        if($eform->code) {
+            $eform->code = $request->code;
+        }
         $eform->contact_no = $request->contact_no;
         $eform->fax = $request->fax;
         $eform->company = $request->company;
@@ -112,6 +120,20 @@ class FungsiController extends Controller
         Alert::success('E-Form', 'Form has succcessfully submitted!');
         return back();
     }
+
+    public function user_submit_eform_gallery(Request $request)
+    {
+        $eform = new VisitklEform;
+        $eform->name = $request->name;
+        $eform->tagged_words = $request->tagged_words;
+        $eform->description = $request->description;
+        $eform->email = $request->email;
+        $eform->banner = $request->file('banner')->store('visitkl/banner');
+        $eform->save();
+
+        Alert::success('E-Form', 'Form has succcessfully submitted!');
+        return back();
+    }    
 
     public function admin_view_eform()
     {

@@ -35,11 +35,11 @@
         </nav>
     </header>
     <main>
-        <form class="intro" method="POST" action="/eform" enctype="multipart/form-data">
+        <form class="intro" method="POST" action="/eform-gallery" enctype="multipart/form-data">
             @csrf
             <div class="intro__buttons">
                 <input type="submit" value="Submit" class="intro__buttons--submit"/>
-                <a href="/eform"><img class="intro__buttons--reload" src="/figma/src/icons/reload_cherry_good-form.png" alt="reload" /></a>
+                <a href="/eform-gallery"><img class="intro__buttons--reload" src="/figma/src/icons/reload_cherry_good-form.png" alt="reload" /></a>
             </div>
             <div class="intro__head--partition">
                 <div class="intro__head">
@@ -50,48 +50,15 @@
                     </div>
                     <p class="intro__head--text">
                         Promote your events here for FREE.<br/>
-                        Millions of tourists and KL Lites want to know about your event. <a href="/eform-gallery">E-form gallery</a>
+                        Millions of tourists and KL Lites want to know about your event. <a href="/eform">Event e-Form</a>
                     </p>
                 </div>
 
                 <div class="intro__form">
                     <label class="form__container--fill" for="event">
                         <span>Name</span>
-                        <input type="text" id="event" name="name" placeholder="Fun Run With KL" required></input>
-                    </label>
-                    <label class="form__container--fill" for="event">
-                        <span>E-Form Tab</span>
-                        <select class="form__container--fill__select" name="eform_type" id="event-list" required>
-                            <option class="form__container--fill__option" value="" disabled selected>Choose one</option>
-                            <option class="form__container--fill__option" value="event">Event</option>
-                            <option class="form__container--fill__option" value="deals">Deals & Packages</option>
-                            <option class="form__container--fill__option" value="products">Products & Services</option>
-                          </select>
-                    </label>                    
-                    <div class="intro__form--mid">
-                        <label class="form__container--fill" for="date-start">
-                            <span>Start Date</span>
-                            <input type="date" id="date-start" name="date_start" placeholder="25 June 2022" required></input>
-                        </label>
-                        <label class="form__container--fill" for="time-start">
-                            <span>Start Time</span>
-                            <input type="time" id="time-start" name="time_start" placeholder="10 am" required></input>
-                        </label>
-                    </div>
-                    <label class="form__container--fill" for="venue">
-                        <span>Venue</span>
-                        <input type="text" id="venue" name="venue" placeholder="Dataran Merdeka, Kuala Lumpur" required></input>
-                    </label>
-                    <div class="intro__form--mid">
-                        <label class="form__container--fill" for="date-end">
-                            <span>End Date</span>
-                            <input type="date" id="date-end" name="date_end" placeholder="25 July 2022" required></input>
-                        </label>
-                        <label class="form__container--fill" for="time-end">
-                            <span>End Time</span>
-                            <input type="time" id="time-end" name="time_end" placeholder="10 pm" required></input>
-                        </label>
-                    </div>
+                        <input type="text" id="event" name="name" required></input>
+                    </label>                  
                 </div>
             </div>
             
@@ -99,35 +66,17 @@
             <section class="form__container">
                     <label class="form__container--description" for="description">
                         <span>Description</span>
-                        <textarea id="description" name="description" placeholder="A 5km Marathon event." required></textarea>
+                        <textarea id="description" name="description" required></textarea>
                     </label>
+
+                    <label class="form__container--description" for="description">
+                        <span>Tagged Words</span>
+                        <textarea id="description" name="tagged_words" required></textarea>
+                    </label>                    
 
                     <div class="form__container--grid">
                         <div class="form__container--grid__division">
-                            <label class="form__container--fill" for="event-list">
-                                <span>Category</span>
-                                <select class="form__container--fill__select" name="event_type" id="event-list" required>
-                                    <option class="form__container--fill__option" value="" disabled selected>Choose one</option>
-                                    <option class="form__container--fill__option" value="travel">Travel</option>
-                                    <option class="form__container--fill__option" value="accomodations">Accomodations</option>
-                                    <option class="form__container--fill__option" value="food_&_entertainment">Food & Entertainment</option>
-                                    <option class="form__container--fill__option" value="arts_&_culture">Arts & Culture</option>
-                                    <option class="form__container--fill__option" value="places_to_go">Places To Go</option>
-                                    <option class="form__container--fill__option" value="health_&_wellness">Health & Wellness</option>
-                                    <option class="form__container--fill__option" value="mice">MICE</option>
-                                    <option class="form__container--fill__option" value="shopping">Shopping</option>
-                                    <option class="form__container--fill__option" value="sports">Sports</option>
-                                    <option class="form__container--fill__option" value="education">Education</option>
-                                  </select>
-                            </label>
-                            <label class="form__container--fill" for="link">
-                                <span>Link</span>
-                                <input type="url" id="link" name="link" placeholder="Fill in here" required></input>
-                            </label>
-                            <label class="form__container--fill" for="tel">
-                                <span>Contact No.</span>
-                                <input type="tel" id="tel" name="tel" placeholder="Fill in here" required></input>
-                            </label>
+       
                             <label class="form__container--fill" for="email">
                                 <span>Email</span>
                                 <input type="email" id="tel" name="email" placeholder="Fill in here" required></input>
@@ -136,27 +85,12 @@
 
                         <div class="form__container--grid__division">
                             <label class="form__container--fill" for="company">
-                                <span>Company Name</span>
-                                <input type="text" id="company" name="company" placeholder="Fill in here" required></input>
-                            </label>
-                            <label class="form__container--fill" for="fax">
-                                <span>Fax</span>
-                                <input type="text" id="fax" name="fax" placeholder="Fill in here" required></input>
-                            </label>
-
-                            <label class="form__container--fill" for="fax">
-                                <span>Promotional Code (Optional)</span>
-                                <input type="text" id="code" name="code" placeholder="Fill in here"></input>
-                            </label>                            
+                               
 
                             <div class="form__container--buttons__division">
                                 <label class="form__container--buttons__division--label">
-                                    <span>Upload Banner</span>
+                                    <span>Image</span>
                                     <input type="file" id="banners" name="banner" required/>
-                                </label>
-                                <label class="form__container--buttons__division--label">
-                                    <span>Upload Approved DBKL License</span>
-                                    <input type="file" id="license" name="license" required/>
                                 </label>
                             </div>
                         </div>
