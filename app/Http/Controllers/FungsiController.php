@@ -76,7 +76,7 @@ class FungsiController extends Controller
         $event->description = $request->description;
         $event->category = $request->category;
         $event->tarikh = $request->tarikh;
-        $event->iamge = $request->file('iamge')->store('visitkl/image');
+        $event->image = $request->file('image')->store('visitkl/image');
         $event->save();
         return back();
     }
