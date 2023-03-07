@@ -45,31 +45,11 @@
             </p>
         </section>
 
-        <section class="what">
-            <div class="what__container">
-                @foreach($events as $event)
-                <article class="what__container--article">
-                    <div class="what__container--article__left">
-                        <p class="what__container--article__left--text">{{$event->tarikh}}</p>
-                    </div>
-                    <img class="what__container--article__image" src="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{$event->image}}" alt="what's on image'"/>
-                    <div class="what__container--article__right">
-                        <h4 class="what__container--article__right--title">{{$event->title}}</h4>
-                        <p class="what__container--article__right--text">{{$event->description}}</p>
-                    </div>
-                </article>
-                @endforeach
+   
 
-                <div class="what__container--arrows">
-                    <img class="what__container--arrows__left" src="/figma/src/icons/arrow_left_inactive.svg" alt="left arrow"/>
-                    <img class="what__container--arrows__right" src="/figma/src/icons/arrow_right_active.svg" alt="arrow right">
-                </div>
-            </div>
-        </section>        
-
-        {{-- <section class="ipad">
+        <section class="ipad">
             <div class="ipad__head">
-                <div class="ipad__head--left">
+                {{-- <div class="ipad__head--left">
                     <img src="/figma/src/icons/arrow_left_inactive.svg" alt="arrow left"/>
                     <p>March 2023</p>
                     <img src="/figma/src/icons/arrow_right_active.svg" alt="arrow right"/>
@@ -80,160 +60,25 @@
                     <select name="filter-list" id="filter-list">
                         <option value="filter">Select Filter</option>
                     </select> 
-                </div>
+                </div> --}}
             </div>
             <div class="ipad__grid">
-                <!-- Week 1 -->
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SUN</p>
-                    <p class="ipad__grid--item__number--weekend">26</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">MON</p>
-                    <p class="ipad__grid--item__number">27</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">TUE</p>
-                    <p class="ipad__grid--item__number">28</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">WED</p>
-                    <p class="ipad__grid--item__number">01</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">THU</p>
-                    <p class="ipad__grid--item__number">02</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">FRI</p>
-                    <p class="ipad__grid--item__number">03</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SAT</p>
-                    <p class="ipad__grid--item__number--weekend">04</p>
-                </div>
+              
                 
-                <!-- Week 2 -->
+                @foreach($events as $event)
                 <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SUN</p>
-                    <p class="ipad__grid--item__number--weekend">05</p>
+                    <p class="ipad__grid--item__day--weekend">{{$event->tarikh}}</p>
                 </div>
                 <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">MON</p>
-                    <p class="ipad__grid--item__number">06</p>
+                    <img class="what__container--article__image" src="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{$event->image}}" alt="what's on image'"/>
+                    <p class="ipad__grid--item__day">{{$event->description}}</p>
+                    <p class="ipad__grid--item__number">{{$event->title}}</p>
                 </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">TUE</p>
-                    <p class="ipad__grid--item__number">07</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">WED</p>
-                    <p class="ipad__grid--item__number">08</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">THU</p>
-                    <p class="ipad__grid--item__number">09</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">FRI</p>
-                    <p class="ipad__grid--item__number">10</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SAT</p>
-                    <p class="ipad__grid--item__number--weekend">11</p>
-                </div>
+                @endforeach  
 
-                <!-- Week 3 -->
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SUN</p>
-                    <p class="ipad__grid--item__number--weekend">12</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">MON</p>
-                    <p class="ipad__grid--item__number">13</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">TUE</p>
-                    <p class="ipad__grid--item__number">14</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">WED</p>
-                    <p class="ipad__grid--item__number">15</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">THU</p>
-                    <p class="ipad__grid--item__number">16</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">FRI</p>
-                    <p class="ipad__grid--item__number">17</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SAT</p>
-                    <p class="ipad__grid--item__number--weekend">18</p>
-                </div>
 
-                <!-- Week 4 -->
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SUN</p>
-                    <p class="ipad__grid--item__number--weekend">19</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">MON</p>
-                    <p class="ipad__grid--item__number">20</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">TUE</p>
-                    <p class="ipad__grid--item__number">21</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">WED</p>
-                    <p class="ipad__grid--item__number">22</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">THU</p>
-                    <p class="ipad__grid--item__number">23</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">FRI</p>
-                    <p class="ipad__grid--item__number">24</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SAT</p>
-                    <p class="ipad__grid--item__number--weekend">25</p>
-                </div>
-
-                <!-- Week 5 -->
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SUN</p>
-                    <p class="ipad__grid--item__number--weekend">26</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">MON</p>
-                    <p class="ipad__grid--item__number">27</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">TUE</p>
-                    <p class="ipad__grid--item__number">28</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">WED</p>
-                    <p class="ipad__grid--item__number">29</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">THU</p>
-                    <p class="ipad__grid--item__number">30</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day">FRI</p>
-                    <p class="ipad__grid--item__number">31</p>
-                </div>
-                <div class="ipad__grid--item">
-                    <p class="ipad__grid--item__day--weekend">SAT</p>
-                    <p class="ipad__grid--item__number--weekend">01</p>
-                </div>
             </div>
-        </section> --}}
+        </section>
 
         <section class="links">
             <div class="links__title">
