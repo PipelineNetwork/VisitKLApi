@@ -54,7 +54,8 @@
         <thead>
             <tr>
                 <th scope="col">Title</th>
-                <th scope="col">Category</th>
+                <th scope="col">Tarikh</th>
+                <th scope="col">Description</th>
 
             </tr>
         </thead>
@@ -62,7 +63,8 @@
             @foreach ($events as $event)
             <tr>
                 <td>{{$event->title}}</td>
-                <td>{{$event->category}}</td>
+                <td>{{$event->tarikh}}</td>
+                <td>{{$event->description}}</td>
             </tr>
             @endforeach
         </tbody>

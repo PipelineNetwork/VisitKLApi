@@ -45,7 +45,29 @@
             </p>
         </section>
 
-        <section class="ipad">
+        <section class="what">
+            <div class="what__container">
+                @foreach($events as $event)
+                <article class="what__container--article">
+                    <div class="what__container--article__left">
+                        <p class="what__container--article__left--text">{{$event->tarikh}}</p>
+                    </div>
+                    <img class="what__container--article__image" src="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{$event->image}}" alt="what's on image'"/>
+                    <div class="what__container--article__right">
+                        <h4 class="what__container--article__right--title">{{$event->title}}</h4>
+                        <p class="what__container--article__right--text">{{$event->description}}</p>
+                    </div>
+                </article>
+                @endforeach
+
+                <div class="what__container--arrows">
+                    <img class="what__container--arrows__left" src="/figma/src/icons/arrow_left_inactive.svg" alt="left arrow"/>
+                    <img class="what__container--arrows__right" src="/figma/src/icons/arrow_right_active.svg" alt="arrow right">
+                </div>
+            </div>
+        </section>        
+
+        {{-- <section class="ipad">
             <div class="ipad__head">
                 <div class="ipad__head--left">
                     <img src="/figma/src/icons/arrow_left_inactive.svg" alt="arrow left"/>
@@ -211,7 +233,7 @@
                     <p class="ipad__grid--item__number--weekend">01</p>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <section class="links">
             <div class="links__title">
