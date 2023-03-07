@@ -15,7 +15,7 @@ use App\Models\VisitklFaq;
 
 
 use Alert;
-
+use App\Models\VisitklSetting;
 
 class FungsiController extends Controller
 {
@@ -36,7 +36,8 @@ class FungsiController extends Controller
 
     public function admin_view_dashboard()
     {
-        return view('dashboard');
+        $settings = VisitklSetting::all();
+        return view('dashboard', compact('settings'));
     }
 
     ## Event

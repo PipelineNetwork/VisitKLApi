@@ -59,3 +59,5 @@ Route::get('/admin/faqs', [FungsiController::class, 'admin_view_faq']);
 Route::post('/admin/faqs', [FungsiController::class, 'admin_create_faq']);
 Route::get('/admin/faqs/{faq_id}', [FungsiController::class, 'admin_view_faq_detail']);
 Route::put('/admin/faqs/{faq_id}', [FungsiController::class, 'admin_update_faq']);
+
+Route::put('/admin/settings/{setting_id}', [FungsiController::class, 'admin_update_setting']);
