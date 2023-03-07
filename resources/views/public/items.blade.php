@@ -55,7 +55,7 @@
 
             <section class="banner">
                 <img class="banner__leftArrow" src="/figma/src/icons/arrow_left-active.svg" alt="arrow left"/>
-                <div class="banner__grid">
+                <div class="banner__grid">    
                     @foreach($cultures as $culture)
                     <article class="banner__grid--card">
                         <img src="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{$culture->image}}" alt="@borneomedia"/>
