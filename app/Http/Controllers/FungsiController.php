@@ -21,7 +21,8 @@ class FungsiController extends Controller
 {
     public function user_view_homepage()
     {
-        return view('homepage');
+        $events = VisitklEvent::all();
+        return view('homepage', compact('events'));
     }
 
     public function user_search()
@@ -71,6 +72,11 @@ class FungsiController extends Controller
     public function admin_create_event(Request $request)
     {
         $event = new VisitklEvent;
+        $event->title = $request->title;
+        $event->description = $request->description;
+        $event->category = $request->category;
+        $event->tarikh = $request->tarikh;
+        $event->iamge = $request->file('iamge')->store('visitkl/image');
         $event->save();
         return back();
     }

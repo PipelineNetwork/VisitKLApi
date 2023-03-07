@@ -329,39 +329,19 @@
             <section class="what">
                 <img class="what__title" src="/figma/src/logos/whats_on_title.png" alt="what's on title"/>
                 <div class="what__container">
+                    @foreach($events as $event)
                     <article class="what__container--article">
                         <div class="what__container--article__left">
-                            <p class="what__container--article__left--number">26</p>
-                            <p class="what__container--article__left--text">May</p>
+                            <p class="what__container--article__left--text">{{$event->tarikh}}</p>
                         </div>
-                        <img class="what__container--article__image" src="/figma/src/images/whatson_1.png" alt="what's on image'"/>
+                        <img class="what__container--article__image" src="https://pipeline-apps.sgp1.digitaloceanspaces.com/{{$event->image}}" alt="what's on image'"/>
                         <div class="what__container--article__right">
-                            <h4 class="what__container--article__right--title">"Seri MRANTI Aidilfitri" - Raya Open House & <br/>Open Day 2022</h4>
-                            <p class="what__container--article__right--text">"Seri MRANTI Aidilfitri" - Raya Open House and Open Day 2022</p>
+                            <h4 class="what__container--article__right--title">{{$event->title}}</h4>
+                            <p class="what__container--article__right--text">{{$event->description}}</p>
                         </div>
                     </article>
-                    <article class="what__container--article">
-                        <div class="what__container--article__left">
-                            <p class="what__container--article__left--number">29</p>
-                            <p class="what__container--article__left--text">May</p>
-                        </div>
-                        <img class="what__container--article__image" src="/figma/src/images/whatson_2.png" alt="what's on image'"/>
-                        <div class="what__container--article__right">
-                            <h4 class="what__container--article__right--title">Run For Wilayah 2022</h4>
-                            <p class="what__container--article__right--text">Run For Wilayah 2022 is coming back with a physical event!</p>
-                        </div>
-                    </article>
-                    <article class="what__container--article last-item">
-                        <div class="what__container--article__left">
-                            <p class="what__container--article__left--number">29</p>
-                            <p class="what__container--article__left--text">May</p>
-                        </div>
-                        <img class="what__container--article__image" src="/figma/src/images/whatson_3.png" alt="what's on image'"/>
-                        <div class="what__container--article__right">
-                            <h4 class="what__container--article__right--title">Sunday Sip & Paint : Me & My Cat</h4>
-                            <p class="what__container--article__right--text">SIP, PAINT, HAVE FUN! Absolutely NO painting experience needed! <br/>We'll guide you throughout the process!</p>
-                        </div>
-                    </article>
+                    @endforeach
+
                     <div class="what__container--arrows">
                         <img class="what__container--arrows__left" src="/figma/src/icons/arrow_left_inactive.svg" alt="left arrow"/>
                         <img class="what__container--arrows__right" src="/figma/src/icons/arrow_right_active.svg" alt="arrow right">

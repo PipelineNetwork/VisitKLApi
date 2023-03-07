@@ -15,6 +15,23 @@
             </div>
 
             <div class="mb-3 col-4">
+                <label class="form-label">Description</label>
+                <input type="text" name="description" class="form-control">
+            </div>  
+
+            <div class="mb-3 col-4">
+                <label class="form-label">Tarikh</label>
+                <input type="date" name="tarikh" class="form-control">
+            </div>              
+            
+            <div class="mb-3 col-4">
+                <label class="form-label">Image</label>
+                <input type="file"  name="image" required/>
+            </div>                      
+
+
+
+            <div class="mb-3 col-4">
                 <label class="form-label">Category</label>
                 <select class="form-select" name="category">
                     <option value="Organiser" selected>Organiser</option>
